@@ -12,7 +12,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://penatattoo.com/sitemap.xml
+Sitemap: https://www.penatattoo.ink/sitemap.xml
 
 # Crawl delay (optional)
 Crawl-delay: 1
