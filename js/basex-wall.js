@@ -526,8 +526,8 @@ window.addEvent("domready", function () {
         "transition": Fx.Transitions.Quad.easeOut,
         "inertia": true,
         "autoposition": true,
-        "width": 720,
-        "height": 720,
+        "width": 360,
+        "height": 360,
         "rangex": [-100, 100],
         "rangey": [-100, 100],
         callOnUpdate: function (items) {
@@ -542,13 +542,19 @@ window.addEvent("domready", function () {
                     }
                     var file = imagewall[position][0];
                     var img = new Element("img[src=" + file + "]");
+                    img.setStyles({
+                        "width": '360px',
+                        "height": '360px'
+                    });
                     img.inject(items[i].node).fade("hide").fade("in");
                     var list = new Element("ul");
                     list.setProperty("class", "slideshow")
                     for (var j = 0; j < imagewall[position][1].length; j++) {
                         var slide = new Element("li");
                         new Element("img", {
-                            src: imagewall[position][1][j][0]
+                            src: imagewall[position][1][j][0],
+                            width: '360px',
+                            height: '360px'
                         }).inject(slide);
                         var desc = new Element("span", {
                             html: imagewall[position][1][j][1]
@@ -566,7 +572,7 @@ window.addEvent("domready", function () {
                         mouseenter: function (event) {
                             list.getChildren("li").setStyles({
                                 "visibility": "hidden",
-                                "opacity": 0
+                                "opacity": 0,
                             });
                             stop = false;
                             if (imagewall[position][1].length) {
