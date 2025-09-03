@@ -1318,7 +1318,8 @@ line-height: 34px;
 }
 
 .logo .logo-img::before {
-background: url(../img/logo.png) no-repeat;
+background: url(../img/1.jpg) no-repeat;
+background-size: contain;
 }
 
 .logo.off {
