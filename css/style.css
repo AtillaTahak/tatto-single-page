@@ -829,6 +829,8 @@ color: #e0e0e0;
 .bottom-credits {
 position: absolute;
 display: block;
+display: flex;
+align-items: flex-end;
 width: auto;
 height: 50px;
 left: 50px;
