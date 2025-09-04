@@ -526,8 +526,8 @@ window.addEvent("domready", function () {
         "transition": Fx.Transitions.Quad.easeOut,
         "inertia": true,
         "autoposition": true,
-        "width": 360,
-        "height": 360,
+        "width": 310,
+        "height": 310,
         "rangex": [-100, 100],
         "rangey": [-100, 100],
         callOnUpdate: function (items) {
@@ -543,8 +543,8 @@ window.addEvent("domready", function () {
                     var file = imagewall[position][0];
                     var img = new Element("img[src=" + file + "]");
                     img.setStyles({
-                        "width": '360px',
-                        "height": '360px'
+                        "width": '310px',
+                        "height": '310px'
                     });
                     img.inject(items[i].node).fade("hide").fade("in");
                     var list = new Element("ul");
@@ -553,8 +553,8 @@ window.addEvent("domready", function () {
                         var slide = new Element("li");
                         new Element("img", {
                             src: imagewall[position][1][j][0],
-                            width: '360px',
-                            height: '360px'
+                            width: '310px',
+                            height: '310px'
                         }).inject(slide);
                         var desc = new Element("span", {
                             html: imagewall[position][1][j][1]
